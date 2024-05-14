@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+  <head>{{ partial "head.html" . }}
+  <body>
+    <header>
+      <nav>
+        <a href="/">{{ .Site.Title }}</a>
+        {{ $currentPage := . }}
+        {{ $section := .Site.GetPage $currentPage.Section }}
+        {{ range .Site.Menus.main }}
+        <a {{ if $section.IsMenuCurrent "main" . }}class="current"{{ end }}
+        href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </header>
+  {{ block "main" . }} {{ end }}
