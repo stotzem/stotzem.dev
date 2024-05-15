@@ -1,0 +1,50 @@
+header {
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+
+  nav {
+    display: flex;
+    background: #333;
+    flex-direction: column;
+
+    @media (min-width: 600px) {
+      align-items: center;
+      flex-direction: row;
+    }
+
+  }
+
+  a {
+    color: inherit;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+
+    &:first-child {
+      font-size: 1.5rem;
+      border-bottom: 1px solid;
+      padding: 0 14px;
+
+      @media (min-width: 600px) {
+        border: none;
+        flex: 1;
+        text-align: left;
+        height: 100%;
+      }
+
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: underline overline 2px;
+    }
+
+  }
+
+  .current {
+    color: black;
+    background: white;
+  }
+
+}

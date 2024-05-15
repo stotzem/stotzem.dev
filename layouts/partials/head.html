@@ -2,6 +2,11 @@
 <meta name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=1">
 
+{{ with resources.Get "scss/main.scss" | toCSS (dict "transpiler"
+"dartsass" "targetPath" "style.css") }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }}
+
 {{ if isset .Params "title" }}
   <meta property="og:title" content="{{ .Title }} [{{ .Site.Title }}]">
   <title>{{ .Title }} [{{ .Site.Title }}]</title>
