@@ -2,5 +2,4 @@ title = 'stotzem.dev'
 copyright = '© 2024 Oliver Stotzem'
 baseURL = 'https://stotzem.dev'
 defaultContentLanguage = 'de'
-
 resourceDir = '.resources'
