@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+    {{ if .Params.noindex -}}
+        <meta name="robots" content="noindex,nofollow">
+    {{- end }}
+
+    <link href="{{ .Permalink }}" rel="canonical">
+
+    <title>
+        {{- if eq .Title site.Title | and .IsHome -}}
+            {{ site.Title }}
+        {{- else -}}
+            {{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}
+        {{- end -}}
+    </title>
+</head>
+<body>
+{{ block "main" . }}{{ end }}
+</body>
