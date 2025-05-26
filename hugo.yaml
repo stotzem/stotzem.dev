@@ -1,0 +1,8 @@
+title: stotzem.dev
+baseURL: https://stotzem.dev
+languageCode: de-DE
+
+module:
+  hugoVersion:
+    min: 0.146.0
+    extended: true
