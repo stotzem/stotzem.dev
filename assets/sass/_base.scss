@@ -1,0 +1,38 @@
+@use "variables" as *;
+
+$line-height-base: 1.5 !default;
+
+html {
+  // Normalize default line height across browsers to improve consistency.
+  line-height: $line-height-base;
+
+  // Disable automatic font scaling in iOS Safari when switching between
+  // portrait and landscape. Setting this to 100% ensures the font size remains
+  // as intended, preventing unexpected zooming.
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  // Ensures the html element takes up the full width of the viewport.
+  height: 100%;
+
+  // Forces the html element to take up the full height of the viewport.
+  width: 100%;
+}
+
+body {
+  // Forces consistent font smoothing acress platforms.
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  // Disables automatic ligatures to ensure consistent character rendering
+  // across browsers.
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+
+  // Balances legibility and rendering speed.
+  text-rendering: optimizeLegibility;
+
+  // Prevents automatic text inflation on mobile Safari when switching
+  // orientations
+  -webkit-text-size-adjust: 100%;
+}
