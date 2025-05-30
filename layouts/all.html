@@ -1,4 +1,6 @@
-{{ define "main" -}}
-    <h2>{{ .Params.Title }}</h2>
-    {{- .Content -}}
+{{ define "main" }}
+    <main>
+        <h2>{{ .Params.Title }}</h2>
+        {{- .Content }}
+    </main>
 {{- end }}

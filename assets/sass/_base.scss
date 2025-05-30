@@ -1,17 +1,13 @@
+@use "sass:map";
 @use "variables" as *;
 
-$line-height-base: 1.5 !default;
+// Applies `border-box` sizing model globally to all elements and
+// pseudo-elements.
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-html {
-  // Normalize default line height across browsers to improve consistency.
-  line-height: $line-height-base;
-
-  // Disable automatic font scaling in iOS Safari when switching between
-  // portrait and landscape. Setting this to 100% ensures the font size remains
-  // as intended, preventing unexpected zooming.
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-
+html, body {
   // Ensures the html element takes up the full width of the viewport.
   height: 100%;
 
@@ -19,7 +15,26 @@ html {
   width: 100%;
 }
 
+html {
+  // Normalize default line height across browsers to improve consistency.
+  line-height: map-get($line-height, default);
+
+  // Disable automatic font scaling in iOS Safari when switching between
+  // portrait and landscape. Setting this to 100% ensures the font size remains
+  // as intended, preventing unexpected zooming.
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  min-height: 100vh;
+
+  // Set default font:
+  font-family: map-get($font, default);
+
   // Forces consistent font smoothing acress platforms.
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
