@@ -38,5 +38,12 @@
     </title>
 </head>
 <body>
+<header>
+    <h1>{{ site.Title }}</h1>
+    <ul>
+        <li class="active"><a href="/games">Games</a></li>
+        <li><a href="/software">Software</a></li>
+    </ul>
+</header>
 {{ block "main" . }}{{ end }}
 </body>

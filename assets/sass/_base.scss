@@ -1,4 +1,3 @@
-@use "sass:map";
 @use "variables" as *;
 
 // Applies `border-box` sizing model globally to all elements and
@@ -16,9 +15,6 @@ html, body {
 }
 
 html {
-  // Normalize default line height across browsers to improve consistency.
-  line-height: map-get($line-height, default);
-
   // Disable automatic font scaling in iOS Safari when switching between
   // portrait and landscape. Setting this to 100% ensures the font size remains
   // as intended, preventing unexpected zooming.
@@ -28,12 +24,10 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
-  display: grid;
-  min-height: 100vh;
-
-  // Set default font:
-  font-family: map-get($font, default);
+  color: $color-text-default;
+  background: $color-bg2;
+  font-family: $font-default;
+  line-height: $line-height-default;
 
   // Forces consistent font smoothing acress platforms.
   -moz-osx-font-smoothing: grayscale;
