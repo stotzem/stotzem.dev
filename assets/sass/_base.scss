@@ -6,14 +6,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  // Ensures the html element takes up the full width of the viewport.
-  height: 100%;
-
-  // Forces the html element to take up the full height of the viewport.
-  width: 100%;
-}
-
 html {
   // Disable automatic font scaling in iOS Safari when switching between
   // portrait and landscape. Setting this to 100% ensures the font size remains
