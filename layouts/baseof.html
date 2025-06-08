@@ -38,6 +38,15 @@
     </title>
 </head>
 <body>
-<header><a href="/">stotzem.dev:/</a><a href="/software">software/</a></header>
+<header><a href="{{ ref . "/" }}">stotzem.dev</a>
+    {{- range where .Ancestors "IsHome" false -}}
+        <a href="{{ .Permalink }}">/{{ .Title }}</a>
+    {{- end -}}
+    {{- if not .IsHome -}}
+        <span>/{{ .Title }}</span>
+    {{- end -}}
+</header>
+<main>
 {{ block "main" . }}{{ end }}
+</main>
 </body>

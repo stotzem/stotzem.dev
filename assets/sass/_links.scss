@@ -1,0 +1,10 @@
+@use "variables" as *;
+
+a {
+  color: inherit;
+  text-decoration: underline dotted;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
