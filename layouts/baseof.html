@@ -47,7 +47,7 @@
     {{- end -}}
 </header>
 <main>
-{{ block "main" . }}{{ end }}
+    {{ block "main" . }}{{ end }}
 </main>
 <footer>
     <p>
@@ -59,4 +59,6 @@
         Farbpalette inspiriert von <a href="https://www.nordtheme.com/" target="_blank">Nord Theme</a>
     </p>
 </footer>
+{{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 </body>
