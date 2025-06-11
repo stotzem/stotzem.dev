@@ -1,64 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-
-    {{ if .Params.noindex -}}
-        <meta name="robots" content="noindex,nofollow">
-    {{- end }}
-
-    <link href="{{ .Permalink }}" rel="canonical">
-
-    {{ with resources.Get "sass/main.scss" -}}
-        {{ $opts := dict
-                "enableSourceMap" hugo.IsDevelopment
-                "outputStyle" (cond hugo.IsDevelopment "expanded" "compressed")
-                "targetPath" "style.css"
-                "transpiler" "dartsass"
-        -}}
-        {{ with . | toCSS $opts -}}
-            {{ if hugo.IsDevelopment -}}
-                <link rel="stylesheet" href="{{ .RelPermalink }}">
-            {{- else -}}
-                {{ with . | fingerprint -}}
-                    <link rel="stylesheet" href="{{ .RelPermalink }}"
-                          integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-                {{- end -}}
-            {{ end -}}
-        {{ end -}}
-    {{ end }}
-
-    <title>
-        {{- if eq .Title site.Title | and .IsHome -}}
-            {{ site.Title }}
-        {{- else -}}
-            {{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}
-        {{- end -}}
-    </title>
-</head>
-<body>
-<header><a href="{{ ref . "/" }}">stotzem.dev</a>
-    {{- range where .Ancestors "IsHome" false -}}
-        <a href="{{ .Permalink }}">/{{ .Title }}</a>
-    {{- end -}}
-    {{- if not .IsHome -}}
-        <span>/{{ .Title }}</span>
-    {{- end -}}
-</header>
-<main>
-    {{ block "main" . }}{{ end }}
-</main>
-<footer>
-    <p>
-        Copyright © 2025 Oliver Stotzem<br>
-        <a href="{{ ref . "/imprint" }}">Impressum & Datenschutz</a>
-    </p>
-    <p>
-        <a href="https://git.os.ax/oliver/stotzem.dev" target="_blank">Quellcode dieser Webseite</a><br>
-        Farbpalette inspiriert von <a href="https://www.nordtheme.com/" target="_blank">Nord Theme</a>
-    </p>
-</footer>
-{{ $js := resources.Get "js/main.js" | minify | fingerprint }}
-<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-</body>
+{{ partial "head.html" . }}
+<div class="container">
+    <header>
+        {{ partial "header.html" . }}
+    </header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+        {{ partial "footer.html" . }}
+    </footer>
+    {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+</div>
