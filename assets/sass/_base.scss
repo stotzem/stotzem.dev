@@ -18,15 +18,12 @@ html {
 body {
   margin: 0;
   height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
   color: $color-text-default;
   background: $color-bg2;
   font-family: $font-default;
   line-height: $line-height-default;
 
-  // Forces consistent font smoothing acress platforms.
+  // Forces consistent font smoothing across platforms.
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
