@@ -1,7 +1,6 @@
 {{ $file := .Get "file" }}
 {{ $key := .Get "key" }}
 {{ $headers := split (.Get "headers") "," }}
-{{ $format := .Get "format" | default "" }}
 {{ $data := index (readFile (printf "data/%s" $file) | unmarshal) $key }}
 <table>
     <tr>
@@ -11,18 +10,8 @@
     </tr>
     {{ range $row := $data }}
         <tr>
-            {{ range $i, $cell := $row }}
-                <td>
-                    {{- if eq $i 0 -}}
-                        {{- if eq $format "code" -}}
-                            <code>{{ $cell }}</code>
-                        {{- else -}}
-                            {{ $cell }}
-                        {{ end }}
-                    {{- else -}}
-                        {{ $cell }}
-                    {{- end -}}
-                </td>
+            {{ range $cell := $row }}
+                <td>{{ $cell | markdownify | safeHTML }}</td>
             {{- end -}}
         </tr>
     {{ end }}
