@@ -4,4 +4,4 @@ draft: true
 title: 'HTML'
 ---
 
-- [Elemente]({{% ref "/html/elements" %}})
+- [Elemente]({{% ref "/html/reference" %}})

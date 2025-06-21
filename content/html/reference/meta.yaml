@@ -1,0 +1,15 @@
+#file: noinspection YAMLSchemaValidation
+- - base
+  - Basispfad für Links
+- - link
+  - Verlinkt externe Ressourcen
+- - meta
+  - Metadaten
+- - noscript
+  - Falls Scripting nicht unterstützt wird
+- - script
+  - Scripting
+- - style
+  - Stylesheet
+- - title
+  - Titel des Dokuments (im Browser-Tab)

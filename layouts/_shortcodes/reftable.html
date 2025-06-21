@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        {{ range split (.Get 1) "," }}
+            <th>{{ . }}</th>
+        {{ end }}
+    </tr>
+    {{ range $row := .Get 0 | .Page.Resources.Get | transform.Unmarshal }}
+        {{ $id := index $row 0 }}
+        {{ $target := $.Page.Site.GetPage (printf "%s/%s" $.Page.Parent.Path $id) }}
+        <tr>
+            <td>
+                {{- if $target -}}<a href="{{ $target.RelPermalink }}">{{ end -}}
+                <code>{{ $id }}</code>
+                {{- if $target -}}</a>{{ end -}}
+            </td>
+            {{ range (after 1 .) }}
+                <td>{{- . | markdownify | safeHTML -}}</td>
+            {{ end }}
+        </tr>
+    {{ end }}
+</table>
