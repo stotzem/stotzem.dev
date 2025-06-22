@@ -19,3 +19,7 @@ title: 'HTML Elemente'
 ## Listen
 
 {{< reftable "lists.yaml" "Element,Navigation" >}}
+
+## Textstrukturierung
+
+{{< reftable "text_structure.yaml" "Element,Navigation" >}}
