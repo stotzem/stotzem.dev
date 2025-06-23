@@ -1,0 +1,36 @@
+- - strong
+  - Starker Hinweis / Wichtigkeit (fett)
+- - em
+  - Betonung (kursiv)
+- - mark
+  - Hervorgehobener Text
+- - small
+  - Kleingedruckter Zusatztext
+- - sub
+  - Tiefgestellter Text
+- - sup
+  - Hochgestellter Text
+- - code
+  - Inline-Code
+- - kbd
+  - Tastatureingabe
+- - samp
+  - Beispielausgabe
+- - var
+  - Variable oder Platzhalter im Text
+- - address
+  - Adresse
+- - q
+  - Kurzes Inline-Zitat
+- - cite
+  - Quelle oder Werkstitel
+- - abbr
+  - "Abkürzung mit optionalem Langtext via `title`"
+- - dfn
+  - Definition eines Begriffs
+- - time
+  - Maschinenlesbare Zeitangabe
+- - ins
+  - Eingefügter Text (typisch unterstrichen)
+- - del
+  - Gelöschter Text (typisch durchgestrichen)

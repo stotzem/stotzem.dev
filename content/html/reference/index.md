@@ -23,3 +23,9 @@ title: 'HTML Elemente'
 ## Textstrukturierung
 
 {{< reftable "text_structure.yaml" "Element,Navigation" >}}
+
+## Semantische Textformatierung
+
+Diese Elemente strukturieren Inhalte semantisch.
+
+{{< reftable "text_semantic.yaml" "Element,Navigation" >}}
