@@ -29,3 +29,10 @@ title: 'HTML Elemente'
 Diese Elemente strukturieren Inhalte semantisch.
 
 {{< reftable "text_semantic.yaml" "Element,Navigation" >}}
+
+## Präsentationale Textformatierung
+
+Diese Elemente dienen primär der optischen Darstellung und sind meist nicht
+semantisch sinnvoll.
+
+{{< reftable "text_nonsemantic.yaml" "Element,Navigation" >}}
