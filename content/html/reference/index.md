@@ -36,3 +36,7 @@ Diese Elemente dienen primär der optischen Darstellung und sind meist nicht
 semantisch sinnvoll.
 
 {{< reftable "text_nonsemantic.yaml" "Element,Navigation" >}}
+
+# Bilder und Medien
+
+{{< reftable "media.yaml" "Element,Navigation" >}}

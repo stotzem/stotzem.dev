@@ -1,0 +1,24 @@
+- - img
+  - Bild
+- - figure
+  - Gruppierung von Bild & Beschriftung
+- - figcaption
+  - "Beschriftung für `<figure>`"
+- - picture
+  - Responsives Bild
+- - video
+  - Videoelement
+- - audio
+  - Audioelement
+- - source
+  - "Medienquelle (für `<video>`, `<audio>`, `<picture>`)"
+- - track
+  - Untertitel-/Spurdaten für Medien
+- - canvas
+  - Zeichenfläche für Skriptgrafiken
+- - svg
+  - Vektorgrafikformat
+- - map
+  - Bildkarte (Image Map)
+- - area
+  - Bereich in einer Bildkarte
