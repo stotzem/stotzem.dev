@@ -1,4 +1,0 @@
-<a href="{{ ref . "/" }}">stotzem.dev</a>
-{{- range where .Ancestors "IsHome" false -}}
-    <a href="{{ .Permalink }}">/{{ .Title }}</a>
-{{- end -}}
