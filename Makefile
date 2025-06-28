@@ -2,4 +2,6 @@
 
 all: publish
 publish:
-	@/usr/bin/rsync -avP --delete ./ uberspace:www/website
+	@/usr/bin/rsync -avP --delete \
+	public src config.php \
+	uberspace:www/website/

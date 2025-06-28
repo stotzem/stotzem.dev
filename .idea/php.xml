@@ -15,6 +15,7 @@
       <PhpCSConfiguration asDefaultInterpreter="true" />
     </phpcs_settings>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.4" />
   <component name="PhpStan">
     <PhpStan_settings>
       <PhpStanConfiguration asDefaultInterpreter="true" />
