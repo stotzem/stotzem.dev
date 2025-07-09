@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SQL" type="DatabaseScript">
+    <script-file value="$PROJECT_DIR$/sql/tables.sql" />
+    <script-file value="$PROJECT_DIR$/sql/dlcs.sql" />
+    <script-mode>FILE</script-mode>
+    <data-source id="800fdc5f-8657-4886-9eb0-cf99776a6468" namespace="schema/&quot;stotzem&quot;" />
+    <method v="2" />
+  </configuration>
+</component>

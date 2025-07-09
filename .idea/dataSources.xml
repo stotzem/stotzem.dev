@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="stotzem_planetzoo@localhost" uuid="7da2a72b-27e2-4986-bfae-36bd2299f8e0">
+    <data-source source="LOCAL" name="stotzem@localhost" uuid="800fdc5f-8657-4886-9eb0-cf99776a6468">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mariadb://localhost:3306/stotzem_planetzoo</jdbc-url>
+      <jdbc-url>jdbc:mariadb://localhost:3306/stotzem</jdbc-url>
       <jdbc-additional-properties>
         <property name="database.introspection.mysql.dbe5060" value="true" />
       </jdbc-additional-properties>
