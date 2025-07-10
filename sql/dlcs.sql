@@ -1,3 +1,16 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS planetzoo_dlcs;
+
+CREATE TABLE planetzoo_dlcs (
+    id TINYINT UNSIGNED,
+    name VARCHAR(32) NOT NULL,
+    release_date DATE,
+    PRIMARY KEY ( id )
+);
+
+SET FOREIGN_KEY_CHECKS = 1;
+
 INSERT INTO
     planetzoo_dlcs ( id, name, release_date )
 VALUES
