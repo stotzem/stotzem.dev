@@ -3,10 +3,12 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS planetzoo_dlcs;
 
 CREATE TABLE planetzoo_dlcs (
-    id TINYINT UNSIGNED,
-    name VARCHAR(32) NOT NULL,
-    release_date DATE,
-    PRIMARY KEY ( id )
+    -- DLC ID
+    id TINYINT UNSIGNED PRIMARY KEY,
+    -- DLC title
+    name VARCHAR(26) NOT NULL,
+    -- Release Date
+    release_date DATE
 );
 
 SET FOREIGN_KEY_CHECKS = 1;

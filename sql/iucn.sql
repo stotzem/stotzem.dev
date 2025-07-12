@@ -3,11 +3,14 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS planetzoo_iucn;
 
 CREATE TABLE planetzoo_iucn (
-    id TINYINT UNSIGNED,
+    -- IUCN ID
+    id TINYINT UNSIGNED PRIMARY KEY,
+    -- IUCN code
     code CHAR(2) NOT NULL,
-    desc_en VARCHAR(35) NOT NULL,
-    desc_de VARCHAR(35) NOT NULL,
-    PRIMARY KEY ( id )
+    -- English description
+    desc_en VARCHAR(21) NOT NULL,
+    -- German description
+    desc_de VARCHAR(27) NOT NULL
 );
 
 SET FOREIGN_KEY_CHECKS = 1;
